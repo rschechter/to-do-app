@@ -29,6 +29,12 @@ function onReady() {
 
     // empty the input
     newToDoText.value = '';
+
+    // create delete button
+    let deleteButton = document.createElement('button');
+
+    //set button text
+    deleteButton.textContent = 'Delete';
   });
 }
 
