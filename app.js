@@ -35,6 +35,13 @@ function onReady() {
 
     //set button text
     deleteButton.textContent = 'Delete';
+
+    deleteButton.addEventListener('click', function(event){
+      toDoList.removeChild(this.parentElement);
+    })
+
+    //attach delete button to newLi
+    newLi.appendChild(deleteButton);
   });
 }
 
