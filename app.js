@@ -21,6 +21,12 @@ function onReady() {
     // set the title
     newLi.textContent = title;
 
+    newLi.classList.add("mdl-button mdl-js-button mdl-button--raised");
+    newLi.classList.add("mdl-textfield mdl-js-textfield mdl-textfield--floating-label");
+    newLi.classList.add("mdl-textfield__label");
+    newLi.classList.add("mdl-textfield__input");
+    newLi.classList.add("mdl-layout__content");
+
     // attach the checkbox to the Li
     newLi.appendChild(checkbox);
 
@@ -43,7 +49,7 @@ function onReady() {
     //attach delete button to newLi
     newLi.appendChild(deleteButton);
   });
-}
+
 
 window.onload = function() {
   alert("The window has loaded!");
