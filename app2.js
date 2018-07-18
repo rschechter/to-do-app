@@ -29,7 +29,6 @@ function onReady() {
       newLi.appendChild(deleteButton);
     });
    }
-
   function createNewToDo() {
    const newToDoText = document.getElementById('newToDoText');
    if (!newToDoText.value) { return; }
