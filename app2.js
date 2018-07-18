@@ -13,14 +13,14 @@ function onReady() {
       checkbox.type = "checkbox";
 
       const deleteButton = document.createElement('button');
-      deleteButton.textContent = "Delete";
-
+      deleteButton.textContent = "X";
+      deleteButton.classList.add("mdl-button", "mdl-js-button", "mdl-button--fab");
       deleteButton.addEventListener('click', event => {
         toDos = toDos.filter(function(item){
           return item.id !== toDo.id;
         })
       renderTheUI();
-      })
+    });
 
       newLi.textContent = toDo.title;
 
@@ -29,17 +29,18 @@ function onReady() {
       newLi.appendChild(deleteButton);
     });
    }
+
   function createNewToDo() {
    const newToDoText = document.getElementById('newToDoText');
    if (!newToDoText.value) { return; }
 
    toDos.push({
     title: newToDoText.value,
-    complete: false
-    id: id
+    complete: false,
+    id: id;
    });
 
-   id++;
+   ++id;
    newToDoText.value = '';
    renderTheUI();
   }
