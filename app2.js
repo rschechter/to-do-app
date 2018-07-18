@@ -1,6 +1,6 @@
 function onReady() {
   let id = 0;
-  const toDos = [];
+  let toDos = [];
   const addToDoForm = document.getElementById('addToDoForm');
 
    function renderTheUI() {
